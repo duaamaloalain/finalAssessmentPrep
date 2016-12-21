@@ -32,3 +32,71 @@
  */
 
 //writ your code here .....
+var arrayOfplayers=[];
+function  Player(name) {
+	var x =name ;
+	return {
+		addInfo:function (age,position,level,availability) {
+			return addInfo1(age, position,level,availability); 
+		}, 
+		increaseLevel:function () {
+			return increaseLevel1(num);
+		},
+		isAvailable:function () {
+			return isAvailable1();
+		},
+		decreaseLevel:function(arrayOfplayers) {
+			arrayOfplayers.forEach(function (element, i ) {
+				if(element.age >30 )
+					element.level --; 
+			})
+			return arrayOfplayers
+		},
+		sortPalyerBy:function (arrayOfplayers , key) {
+			if (key !== undefined ){
+				return arrayOfplayers ;
+			}
+		}
+	};
+}	
+
+
+
+
+function  addInfo1(name, age, position, level, availability) {
+	arrayOfplayers.push({
+		name:name,
+		age:age, 
+		position:position, 
+		level:level, 
+		availability:availability  
+	});
+}
+
+addInfo1("ahmad", 22, "player1", 1,true );
+addInfo1("mohammed", 27, "player2", 5,true );
+addInfo1("salem", 26, "player3", 6,false );
+addInfo1("hasan", 35, "player4", 4,false );
+
+function increaseLevel1(arrayOfplayers) {
+	arrayOfplyaers.forEach(function (element, i ) {
+		element.level ++ ; 
+	})
+	return arrayOfplayers
+}
+
+
+function isAvailable1() {
+return arrayOfplayers.filter(function (result,element) {
+			if (element[name] === x ){
+		return result && (element.availability === true) ; 
+	}
+	},true)
+	
+}
+
+
+
+
+
+
